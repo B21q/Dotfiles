@@ -1,0 +1,209 @@
+/*
+ * vim: ft=less
+ */
+
+*{
+	font-family: JetBrains Nerd Font;
+}
+
+@define-color cc-bg rgba(40, 40, 40, 1);
+
+@define-color noti-border-color rgba(31, 30, 30, 1);
+@define-color noti-bg rgba(40, 40, 40, 1);
+@define-color noti-bg-hover rgba(40, 40, 40, 1);
+@define-color noti-bg-focus rgba(40, 40, 40, 1);
+@define-color noti-close-bg rgba(208, 200, 164, 1);
+@define-color noti-close-bg-hover rgba(208, 200, 164, 1);
+
+@define-color bg-selected rgba(175, 121, 25, 1);
+
+.notification-row { 
+  outline: none;
+}
+
+.notification-row:focus,
+.notification-row:hover {
+  background: @cc-bg;
+  border-radius: 15px;
+  outline: none;
+}
+
+.notification {
+  border-radius: 15px;
+  margin: 15px 12px;
+  border: 1px solid #1f1e1e;
+  padding: 0;
+}
+
+/* Uncomment to enable specific urgency colors
+.low {
+  background: yellow;
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.normal {
+  background: green;
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.critical {
+  background: red;
+  padding: 6px;
+  border-radius: 12px;
+}
+*/
+
+.notification-content {
+  background: transparent;
+  padding: 6px;
+  border-radius: 12px;
+  border-radius: 15px;
+}
+
+.close-button {
+  background: @noti-close-bg;
+  color: white;
+  text-shadow: none;
+  padding: 0;
+  border-radius: 100%;
+  margin-top: 10px;
+  margin-right: 16px;
+  box-shadow: none;
+  border: none;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.close-button:hover {
+  box-shadow: none;
+  background: @noti-close-bg-hover;
+  transition: all 0.15s ease-in-out;
+  border: none;
+}
+
+.notification-default-action,
+.notification-action {
+  padding: 4px;
+  margin: 0;
+  box-shadow: none;
+  background: @noti-bg;
+  border: 1px solid @noti-border-color;
+  color: white;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+  -gtk-icon-effect: none;
+  background: @noti-bg-hover;
+}
+
+.notification-default-action {
+  border-radius: 12px;
+}
+
+/* When alternative actions are visible */
+.notification-default-action:not(:only-child) {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.notification-action {
+  border-radius: 15px;
+  border-top: none;
+  border-right: none;
+}
+
+/* add bottom border radius to eliminate clipping */
+.notification-action:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.notification-action:last-child {
+  border-bottom-right-radius: 10px;
+  border-right: 1px solid @noti-border-color;
+}
+
+.image {
+}
+
+.body-image {
+  margin-top: 6px;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.summary {
+  color: white;
+  text-shadow: none;
+}
+
+.time {
+  color: white;
+  text-shadow: none;
+  margin-right: 18px;
+}
+
+.body {
+  background: transparent;
+  color: white;
+  text-shadow: none;
+  border-radius: 15px;
+}
+
+/* The "Notificações" and "Não pertube" text widget */
+.top-action-title {
+  color: white;
+  text-shadow: none;
+}
+
+.control-center-clear-all {
+  color: white;
+  text-shadow: none;
+  background: @noti-bg;
+  border: 1px solid @noti-border-color;
+  box-shadow: none;
+  border-radius: 15px;
+}
+
+.control-center-clear-all:hover {
+  background: @noti-bg-hover;
+  border-radius: 15px;
+}
+
+.control-center-dnd {
+  border-radius: 12px;
+  background: @noti-bg;
+  border: 1px solid @noti-border-color;
+  box-shadow: none;
+}
+
+.control-center-dnd:checked {
+  background: @bg-selected;
+  border-radius: 15px;
+}
+
+.control-center-dnd slider {
+  background: @noti-bg-hover;
+  border-radius: 12px;
+  border-radius: 15px;
+}
+
+.control-center {
+  background: @cc-bg;
+  border-radius: 15px;
+}
+
+.control-center-list {
+  background: transparent;
+}
+
+.floating-notifications {
+  background: transparent;
+}
+
+/* Window behind control center and on all other monitors */
+.blank-window {
+  background: alpha(black, 0.25);
+}
