@@ -38,7 +38,7 @@ yay -S hyprland-git swaync swaybg rofi nvim socat playerctl pulseaudioc xorg-xwa
 ### **Download**
 
 ```bash
-git clone https://github.com/BTwo1/Hyprland-Gruvbox.git
+git clone https://github.com/qSwero/Hyprland-Gruvbox.git
 ```
 ```bash
 Extract the files and move them to their respective directories.
