@@ -1,9 +1,8 @@
-# GnoLand
+<h1 align="center"> GnoLand </h1>
 
 <img class="special-img-class" src="/Screenshot.png"/>
 
-# Information
-	
+<h1 align="center"> Informations </h1>
    <br>• OS : Arch Linux</br>
    <br>• WM : <a href="https://github.com/hyprwm/Hyprland">Hyprland</a></br>
    <br>• LAUNCHER: <a href="https://github.com/davatorium/rofi">Rofi</a></br>
